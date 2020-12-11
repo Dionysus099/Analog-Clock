@@ -1,0 +1,154 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(131, 131, 250), rgb(203, 129, 255), rgb(131, 131, 250));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.clock{
+    height: 500px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    border: 5px solid black;
+    position: relative;
+}
+
+.clock .number{
+    --angle: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+    transform: rotate(var(--angle));
+}
+
+.clock .number1 { --angle: 30deg; }
+.clock .number1_1 { --angle: 36deg; }
+.clock .number1_2 { --angle: 42deg; }
+.clock .number1_3 { --angle: 48deg; }
+.clock .number1_4 { --angle: 54deg; }
+
+.clock .number2 { --angle: 60deg; }
+.clock .number2_1 { --angle: 66deg; }
+.clock .number2_2 { --angle: 72deg; }
+.clock .number2_3 { --angle: 78deg; }
+.clock .number2_4 { --angle: 84deg; }
+
+.clock .number3 { --angle: 90deg; }
+.clock .number3_1 { --angle: 96deg; }
+.clock .number3_2 { --angle: 102deg; }
+.clock .number3_3 { --angle: 108deg; }
+.clock .number3_4 { --angle: 114deg; }
+
+.clock .number4 { --angle: 120deg; }
+.clock .number4_1 { --angle: 126deg; }
+.clock .number4_2 { --angle: 132deg; }
+.clock .number4_3 { --angle: 138deg; }
+.clock .number4_4 { --angle: 144deg; }
+
+.clock .number5 { --angle: 150deg; }
+.clock .number5_1 { --angle: 156deg; }
+.clock .number5_2 { --angle: 162deg; }
+.clock .number5_3 { --angle: 168deg; }
+.clock .number5_4 { --angle: 174deg; }
+
+.clock .number6 { --angle: 180deg; }
+.clock .number6_1 { --angle: 186deg; }
+.clock .number6_2 { --angle: 192deg; }
+.clock .number6_3 { --angle: 198deg; }
+.clock .number6_4 { --angle: 204deg; }
+
+.clock .number7 { --angle: 210deg; }
+.clock .number7_1 { --angle: 216deg; }
+.clock .number7_2 { --angle: 222deg; }
+.clock .number7_3 { --angle: 228deg; }
+.clock .number7_4 { --angle: 234deg; }
+
+.clock .number8 { --angle: 240deg; }
+.clock .number8_1 { --angle: 246deg; }
+.clock .number8_2 { --angle: 252deg; }
+.clock .number8_3 { --angle: 258deg; }
+.clock .number8_4 { --angle: 264deg; }
+
+.clock .number9 { --angle: 270deg; }
+.clock .number9_1 { --angle: 276deg; }
+.clock .number9_2 { --angle: 282deg; }
+.clock .number9_3 { --angle: 288deg; }
+.clock .number9_4 { --angle: 294deg; }
+
+.clock .number10 { --angle: 300deg; }
+.clock .number10_1 { --angle: 306deg; }
+.clock .number10_2 { --angle: 312deg; }
+.clock .number10_3 { --angle: 318deg; }
+.clock .number10_4 { --angle: 324deg; }
+
+.clock .number11 { --angle: 330deg; }
+.clock .number11_1 { --angle: 336deg; }
+.clock .number11_2 { --angle: 342deg; }
+.clock .number11_3 { --angle: 348deg; }
+.clock .number11_4 { --angle: 354deg; }
+
+.clock .number12 { --angle: 360deg; }
+.clock .number12_1 { --angle: 6deg; }
+.clock .number12_2 { --angle: 12deg; }
+.clock .number12_3 { --angle: 18deg; }
+.clock .number12_4 { --angle: 24deg; }
+
+
+.clock .hand{
+    --angle: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--angle) * 1deg));
+}
+
+.clock .hand.second{
+    width: 4px;
+    height: 50%;
+    background-color: navy;
+}
+
+.clock .hand.minute{
+    width: 8px;
+    height: 40%;
+    background-color: darkblue;
+}
+
+.clock .hand.hour{
+    width: 10px;
+    height: 30%;
+    background-color: black;
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 12;
+    height: 12px;
+    width: 12px;
+    top: 50%;
+    right: 50%;
+    border-radius: 50%;
+
+    transform: translate(50%, -50%);
+}
