@@ -7,6 +7,8 @@
 body{
     /*background: linear-gradient(to bottom, rgb(131, 131, 250), rgb(203, 129, 255), rgb(131, 131, 250));*/
     background-image: url(rain1.jpg);
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
